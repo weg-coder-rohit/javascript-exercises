@@ -1,9 +1,9 @@
-const removeFromArray = function(inputArray, itemToRemove) {
+const removeFromArray = function(inputArray, ...itemToRemove) {
     let inputArrayLength = inputArray.length;
     let newArrayToReturn = [];
 
-    inputArray.forEach(item => {
-        if(item != itemToRemove) {
+    inputArray.forEach((item) => {
+        if(!itemToRemove.includes(item)) {
             newArrayToReturn.push(item);
         }
     });
