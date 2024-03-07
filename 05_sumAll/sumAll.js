@@ -1,6 +1,12 @@
 const sumAll = function(startNumber, endNumber) {
     sum = 0;
-    if (endNumber > startNumber) {
+    if (startNumber < 0 || endNumber < 0) {
+        return 'ERROR'
+    }
+    else if (typeof(startNumber) === typeof("hey") || typeof(endNumber) === typeof("hey")) {
+        return 'ERROR'
+    }
+    else if (endNumber > startNumber) {
         for (let i = startNumber; i <= endNumber; i++) {
             sum += i;
         }
